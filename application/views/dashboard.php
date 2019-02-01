@@ -15,8 +15,35 @@
             <!-- navbar -->
             <?php $this->load->view('_part/navbar.php') ?>
             
+            <h1>Total uang bersih :</h1>
             <h2>Rp. 0,-</h2>
-            <p>Isi tabel pemakaian uang pertanggal.</p>
+            <hr>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card text-white bg-success mb-3">
+                        <div class="card-header"><i class="fas fa-dollar-sign"></i> Uang Bulanan</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Rp. 0,-</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-white bg-success mb-3">
+                        <div class="card-header"><i class="fas fa-dollar-sign"></i> Tabungan</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Rp. 0,-</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-white bg-danger mb-3">
+                        <div class="card-header"><i class="fas fa-money-bill-alt"></i> Tagihan</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Rp. 0,-</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

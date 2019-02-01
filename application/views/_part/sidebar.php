@@ -22,24 +22,16 @@
             </ul>
         </li>
         <li>
-            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fab fa-readme"></i> Laporan</a>
+            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-balance-scale"></i> Laporan</a>
             <ul class="collapse list-unstyled" id="pageSubmenu">
                 <li>
-                    <a href="#">Page 1</a>
-                </li>
-                <li>
-                    <a href="#">Page 2</a>
-                </li>
-                <li>
-                    <a href="#">Page 3</a>
+                    <a href="#">> Tagihan</a>
+                    <a href="#">> Pemakaian Uang</a>
                 </li>
             </ul>
         </li>
-        <li>
-            <a href="#">Portfolio</a>
-        </li>
-        <li>
-            <a href="#">Contact</a>
-        </li>
     </ul>
+    <p style="font-size:0.8em; padding:10px;">
+        Copyright &copy; 2019 Naufal Rivaldi. All Rights Reserved.
+    </p>
 </nav>

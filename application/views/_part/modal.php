@@ -20,7 +20,7 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon1"><i class="fas fa-key"></i></span>
                 </div>
-                <input type="password" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                <input type="password" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
             </div>
             <div class="input-group mb-3">
                 <button type="submit" class="btn btn-success btn-block">Masuk</button>
