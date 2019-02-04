@@ -27,29 +27,29 @@
                     </center>
                 </div>
                 <div class="card-body">
-                    <form action="" method="POST">
+                    <form action="<?= site_url('auth/daftar') ?>" method="POST">
                         <div class="form-group row">
                             <label for="username" class="col-md-3 col-form-label">Username</label>
                             <div class="col-md-9">
-                                <input type="text" class="form-control" id="username">
+                                <input type="text" name="username" class="form-control" id="username">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="password" class="col-md-3 col-form-label">Password</label>
+                            <label for="pass" class="col-md-3 col-form-label">Password</label>
                             <div class="col-md-9">
-                                <input type="text" class="form-control" id="password">
+                                <input type="password" name="pass" class="form-control" id="pass">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="nama" class="col-md-3 col-form-label">Nama Lengkap</label>
                             <div class="col-md-9">
-                                <input type="text" class="form-control" id="nama">
+                                <input type="text" name="nama" class="form-control" id="nama">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="email" class="col-md-3 col-form-label">Email</label>
                             <div class="col-md-9">
-                                <input type="email" class="form-control" id="email">
+                                <input type="email" name="email" class="form-control" id="email">
                             </div>
                         </div>
                         <div class="form-group row">

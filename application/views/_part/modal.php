@@ -9,18 +9,18 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="<?= site_url('home/dashboard') ?>" method="POST">
+        <form action="<?= site_url('auth/login') ?>" method="POST">
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon1"><i class="far fa-user"></i></span>
                 </div>
-                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                <input type="text" name="username" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
             </div>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon1"><i class="fas fa-key"></i></span>
                 </div>
-                <input type="password" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
+                <input type="password" name="pass" class="form-control" placeholder="Password" aria-label="password" aria-describedby="basic-addon1">
             </div>
             <div class="input-group mb-3">
                 <button type="submit" class="btn btn-success btn-block">Masuk</button>
