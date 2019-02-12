@@ -37,10 +37,16 @@ class User_model extends CI_Model{
         $post = $this->input->post();
         $this->nama = $post['nama'];
         $this->username = $post['username'];
-        $this->pass = $post['pass'];
+        $this->pass = md5($post['pass']);
         $this->email = $post['email'];
 
         return $this->db->insert($this->_table, $this);
+    }
+
+    public function cekUser($username, $password){
+        return $this->db
+            ->where('username', $username)
+            ->where('pass', $password)->get($this->_table)->num_rows();
     }
 }
 

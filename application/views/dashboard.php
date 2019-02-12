@@ -47,6 +47,9 @@
         </div>
     </div>
 
+    <!-- modal -->
+    <?php $this->load->view('_part/modal.php') ?>
+
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <?php $this->load->view('_part/javascript.php') ?>
 </body>

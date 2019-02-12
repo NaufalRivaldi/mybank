@@ -36,3 +36,6 @@
   </div>
 </div>
 <!-- login -->
+
+<!-- flash data -->
+<div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
