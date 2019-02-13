@@ -6,7 +6,7 @@
             <span></span>
         </button>
         <span class="navbar-text">
-            Halo, Noval <button class="btn btn-danger">Keluar</button>
+            Halo, <?= $this->session->userdata('nama') ?> <a href="<?= site_url('auth/logout') ?>"><button class="btn btn-danger">Keluar</button></a>
         </span>
     </div>
 </nav>

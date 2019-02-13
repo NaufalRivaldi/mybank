@@ -48,6 +48,13 @@ class User_model extends CI_Model{
             ->where('username', $username)
             ->where('pass', $password)->get($this->_table)->num_rows();
     }
+
+    public function cekLogin(){
+        $login = $this->session->userdata('login');
+        if(!$login){
+            redirect('home/');
+        }
+    }
 }
 
 ?>

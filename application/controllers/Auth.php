@@ -18,7 +18,7 @@ class Auth extends CI_Controller{
         if($row > 0){
             $array_session = array(
                 'nama' => $username,
-                'status' => 'login'
+                'login' => true
             );
 
             $this->session->set_userdata($array_session);
@@ -29,6 +29,12 @@ class Auth extends CI_Controller{
             redirect('home/');
         }
 
+    }
+
+    public function logout(){
+        $this->session->unset_userdata('nama');
+        $this->session->unset_userdata('login');
+        redirect('home/');
     }
 
     public function daftar(){
