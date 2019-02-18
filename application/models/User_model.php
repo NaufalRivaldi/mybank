@@ -49,6 +49,14 @@ class User_model extends CI_Model{
             ->where('pass', $password)->get($this->_table)->num_rows();
     }
 
+    public function getId($username, $password){
+        $query = $this->db
+            ->where('username', $username)
+            ->where('pass', $password)->get($this->_table)->row();
+
+        return $query->id_user;
+    }
+
     public function cekLogin(){
         $login = $this->session->userdata('login');
         if(!$login){

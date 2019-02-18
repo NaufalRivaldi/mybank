@@ -14,10 +14,12 @@ class Auth extends CI_Controller{
         $password = md5($post['pass']);
 
         $row = $this->user_model->cekUser($username, $password);
+        $id_user = $this->user_model->getId($username, $password);
         
         if($row > 0){
             $array_session = array(
                 'nama' => $username,
+                'id' => $id_user,
                 'login' => true
             );
 
@@ -33,6 +35,7 @@ class Auth extends CI_Controller{
 
     public function logout(){
         $this->session->unset_userdata('nama');
+        $this->session->unset_userdata('id');
         $this->session->unset_userdata('login');
         redirect('home/');
     }

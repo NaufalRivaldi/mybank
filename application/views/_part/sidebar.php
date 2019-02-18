@@ -11,13 +11,13 @@
             <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-money-check"></i> Transaksi</a>
             <ul class="collapse list-unstyled" id="homeSubmenu">
                 <li>
-                    <a href="transaksi/pemasukan">> Pemasukan</a>
+                    <a href="<?= site_url('transaksi/pemasukan') ?>">> Pemasukan</a>
                 </li>
                 <li>
-                    <a href="transaksi/pengeluaran">> Pengeluaran</a>
+                    <a href="<?= site_url('transaksi/pengeluaran') ?>">> Pengeluaran</a>
                 </li>
                 <li>
-                    <a href="transaksi/tagihan">> Tagihan</a>
+                    <a href="<?= site_url('transaksi/tagihan') ?>">> Tagihan</a>
                 </li>
             </ul>
         </li>
