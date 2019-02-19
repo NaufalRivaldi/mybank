@@ -23,3 +23,8 @@ if (flashData == 'login-gagal') {
 		button: "OK",
 	});
 }
+
+// datatables
+$(document).ready(function () {
+	$('#myTable').DataTable();
+});

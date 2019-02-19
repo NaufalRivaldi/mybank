@@ -5,7 +5,7 @@
 
     <ul class="list-unstyled components">
         <li>
-            <a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a href="<?= site_url('home/dashboard') ?>"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
         </li>
         <li>
             <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-money-check"></i> Transaksi</a>
@@ -26,7 +26,7 @@
             <ul class="collapse list-unstyled" id="pageSubmenu">
                 <li>
                     <a href="#">> Tagihan</a>
-                    <a href="#">> Pemakaian Uang</a>
+                    <a href="<?= site_url('laporan/pemakaian') ?>">> Pemakaian Uang</a>
                 </li>
             </ul>
         </li>

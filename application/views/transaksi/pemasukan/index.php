@@ -25,7 +25,10 @@
                         <div class="form-group row">
                             <label for="nominal" class="col-sm-2 col-form-label">Nominal (Rp.)</label>
                             <div class="col-sm-10">
-                                <input type="number" name="nominal" class="form-control" id="nominal">
+                                <input type="number" name="nominal" class="form-control <?= (form_error('nominal'))? 'is-invalid' : '' ?>" id="nominal">
+                                <div class="invalid-feedback">
+                                    <?= form_error('nominal') ?>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -37,7 +40,10 @@
                         <div class="form-group row">
                             <label for="keterangan" class="col-sm-2 col-form-label">Keterangan</label>
                             <div class="col-sm-10">
-                                <textarea name="keterangan" class="form-control" id="keterangan" cols="30" rows="10"></textarea>
+                                <textarea name="keterangan" class="form-control <?= (form_error('nominal'))? 'is-invalid' : '' ?>" id="keterangan" cols="30" rows="10"></textarea>
+                                <div class="invalid-feedback">
+                                    <?= form_error('keterangan') ?>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group row">

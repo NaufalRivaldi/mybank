@@ -185,6 +185,11 @@ ul.CTAs a {
 	margin: 5px auto;
 }
 
+.tabel-body {
+	overflow: scroll;
+	width: 100%;
+}
+
 
 /* ---------------------------------------------------
     MEDIAQUERIES

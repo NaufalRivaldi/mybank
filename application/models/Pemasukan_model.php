@@ -29,7 +29,7 @@ class Pemasukan_model extends CI_Model{
             [
                 'field' => 'nominal',
                 'label' => 'nominal',
-                'rules' => 'numeric'
+                'rules' => 'required|numeric'
             ]
         ];
     }
@@ -76,6 +76,15 @@ class Pemasukan_model extends CI_Model{
         $this->keterangan = $post['keterangan'];
         $this->nominal = $post['nominal'];
 
+        $this->income($this->nominal, $this->id_user);
         return $this->db->insert($this->_table, $this);
+    }
+
+    public function income($nominal, $id_user){
+        $user = $this->db->get_where('tb_user', ['id_user' => $id_user])->row();
+        $nominal = $nominal + $user->saldo;
+        
+        $data = array('saldo' => $nominal);
+        return $this->db->update('tb_user', $data , array('id_user' => $id_user));
     }
 }

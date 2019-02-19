@@ -59,7 +59,7 @@ class User_model extends CI_Model{
 
     public function cekLogin(){
         $login = $this->session->userdata('login');
-        if(!$login){
+        if(empty($login)){
             redirect('home/');
         }
     }
