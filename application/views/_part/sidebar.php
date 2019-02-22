@@ -19,6 +19,9 @@
                 <li>
                     <a href="<?= site_url('transaksi/tagihan') ?>">> Tagihan</a>
                 </li>
+                <li>
+                    <a href="<?= site_url('transaksi/pindah') ?>">> Pindah Uang</a>
+                </li>
             </ul>
         </li>
         <li>
@@ -26,7 +29,7 @@
             <ul class="collapse list-unstyled" id="pageSubmenu">
                 <li>
                     <a href="#">> Tagihan</a>
-                    <a href="<?= site_url('laporan/pemakaian') ?>">> Pemakaian Uang</a>
+                    <a href="<?= site_url('laporan/pemakaian') ?>">> Keuangan</a>
                 </li>
             </ul>
         </li>

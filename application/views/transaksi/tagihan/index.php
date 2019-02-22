@@ -15,7 +15,7 @@
             <?php $this->load->view('_part/navbar.php') ?>
 
             <div class="card">
-                <h2 class="card-header"><i class="fas fa-hand-holding-usd"></i> Tambah Pemasukan</h2>
+                <h2 class="card-header"><i class="fas fa-money-bill-alt"></i> Tagihan (Hutang)</h2>
                 <div class="card-body">
                     <form action="<?= site_url('transaksi/pemasukan') ?>" method="POST">
                         <!-- hidden -->

@@ -13,7 +13,7 @@
         <div id="content">
             <!-- navbar -->
             <?php $this->load->view('_part/navbar.php') ?>
-            <h2><i class="fas fa-money-check-alt"></i> Laporan Pemakaian Uang</h2>
+            <h2><i class="fas fa-money-check-alt"></i> Laporan Keuangan</h2>
             
             <!-- table -->
             <?php for($i=0; $i<count($tgl); $i++){ ?>
@@ -39,7 +39,13 @@
                                 </thead>
                                 <tbody>
                                     <?php foreach($data as $data): ?>
-                                    <?php $total += $data->nominal; ?>
+                                    <?php 
+                                        if($data->jenis == 'pemasukan'){
+                                            $total += $data->nominal;
+                                        }else{
+                                            $total -= $data->nominal;
+                                        }
+                                    ?>
                                     <tr class="<?= ($data->jenis == 'pengeluaran')? 'table-danger' : '' ?>">
                                         <td><?= $no++; ?></td>
                                         <td>Rp. <?= number_format($data->nominal) ?></td>

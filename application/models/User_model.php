@@ -7,6 +7,7 @@ class User_model extends CI_Model{
     public $pass;
     public $email;
     public $saldo = 0;
+    public $tabungan = 0;
 
     public function rules(){
         return [

@@ -1,12 +1,12 @@
 <?php
 
-class Pemasukan_model extends CI_Model{
+class Pengeluaran_model extends CI_Model{
     private $_table = 'tb_transaksi';
     public $kode_transaksi;
     public $id_user;
     public $tgl_transaksi;
     public $keterangan;
-    public $jenis = 'pemasukan';
+    public $jenis = 'pengeluaran';
     public $nominal;
 
     public function rules(){
@@ -76,23 +76,23 @@ class Pemasukan_model extends CI_Model{
         $this->keterangan = $post['keterangan'];
         $this->nominal = $post['nominal'];
 
-        $this->income($this->nominal, $this->id_user);
-        $this->plusTabungan($this->nominal, $this->id_user, $post['simpan']);
+        $this->spending($this->nominal, $this->id_user);
+        $this->minTabungan($this->nominal, $this->id_user, $post['simpan']);
         return $this->db->insert($this->_table, $this);
     }
 
-    public function income($nominal, $id_user){
+    public function spending($nominal, $id_user){
         $user = $this->db->get_where('tb_user', ['id_user' => $id_user])->row();
-        $nominal = $nominal + $user->saldo;
+        $nominal = $user->saldo - $nominal;
         
         $data = array('saldo' => $nominal);
         return $this->db->update('tb_user', $data , array('id_user' => $id_user));
     }
 
-    public function plusTabungan($nominal, $id_user, $simpan){
+    public function minTabungan($nominal, $id_user, $simpan){
         if($simpan == 2){
             $user = $this->db->get_where('tb_user', ['id_user' => $id_user])->row();
-            $nominal = $nominal + $user->tabungan;
+            $nominal = $user->tabungan - $nominal;
             
             $data = array('tabungan' => $nominal);
             return $this->db->update('tb_user', $data , array('id_user' => $id_user));
